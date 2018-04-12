@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  Options -Indexes
+
+  RewriteEngine On
+  RewriteCond $1 !^(index\\.php|resources|robots\\.txt)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)$ /aci-hmvctrik/index.php?/$1 [L,QSA]
+</IfModule>
+
+
+
+#<IfModule mod_rewrite.c>
+#	RewriteEngine On
+#	RewriteBase /ci-hmvctrik
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteRule ^(.*)$ /aci-hmvctrik/index.php/$1 [L]
+
+#	ErrorDocument 404 /aci-hmvctrik/index.php
+#</IfModule>
